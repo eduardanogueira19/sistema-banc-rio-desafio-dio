@@ -55,7 +55,11 @@ while True:
                  -------------------------- 
                 """)
         else:
-            print(f"---------------------\n\nExtrato:\n{extrato}Saldo: R${saldo:.2f}\n---------------------")
+            print("---------------------")
+            print("       Extrato       ")                   
+            print(extrato)
+            print(f"\nSaldo: R${saldo:.2f}")
+            print("---------------------")
     
     elif opcao == "0":
         print("Saindo...")
