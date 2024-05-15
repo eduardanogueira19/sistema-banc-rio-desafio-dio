@@ -12,4 +12,12 @@
       - Listar todoa os depósitos e saques realizados na conta.
       - No fim da listagem exibir o saldo atual.
       - Modelo: R$ xxx.xx
-      
+## Atualização do sistema
+- Possui 3 novas funções: Criar usuário, Criar conta e Listar todas as contas
+
+### - Criar usuário:
+      - Pedir os dados pessoais do usuário (nome, cpf, data de nascimento e endereço.
+      - Não deixar criar um usuário com um CPF já existente no sistema.
+### - Criar conta: 
+      - Pedir o CPF do usuário, se já estiver cadastrado no sistema criar conta. Caso negativo mostrar uma mensagem da impossibilidade de criar a conta.
+      - Um usuário pode ter várias contas.
