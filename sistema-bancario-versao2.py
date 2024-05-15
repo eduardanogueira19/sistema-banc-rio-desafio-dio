@@ -78,12 +78,33 @@ def criar_conta(agencia, contas, usuarios):
     else:
         print("Usuário não encontrado.")   
 
+def listar_contas(contas):
+    if not contas:
+        print("Não há contas cadastradas.")
+    else:
+        print("--------------------------------")
+        print("\lista de Contas")
+        print("--------------------------------")
+        for conta in contas:
+            agencia = conta['agencia']
+            numero_conta = conta['numero_conta']
+            usuario = conta['usuario']['nome']
+            cpf = conta['usuario']['cpf']
+            print(f"Agência : {agencia}")
+            print(f"Número da Conta: {numero_conta}")
+            print(f"Titular: {usuario}")
+            print(f"CPF: {cpf}")
+            print(f"------------------------------")
+
+    pass
+
 menu ="""
     [1] Depositar
     [2] Sacar
     [3] Extrato
     [4] Criar usuário
     [5] Criar conta corrente
+    [6] Listar contas
     [s] Sair
 >>> """
 
@@ -115,6 +136,9 @@ while True:
 
     elif opcao == "5":
         criar_conta(AGENCIA, contas, usuarios)
+
+    elif opcao == '6':
+        listar_contas(contas)
 
     elif opcao == "s":
         print("Saindo...")
